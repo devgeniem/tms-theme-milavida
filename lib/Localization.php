@@ -2,6 +2,8 @@
 
 namespace TMS\Theme\Milavida;
 
+use TMS\Theme\Milavida\PostType\Exhibition;
+
 /**
  * Class Localization
  *
@@ -37,6 +39,8 @@ class Localization extends \TMS\Theme\Base\Localization implements \TMS\Theme\Ba
             return $post_types;
         }
 
+        $post_types[ PostType\Exhibition::SLUG ] = PostType\Exhibition::SLUG;
+
         return $post_types;
     }
 
@@ -49,6 +53,7 @@ class Localization extends \TMS\Theme\Base\Localization implements \TMS\Theme\Ba
      * @return array The modified tax_types -array.
      */
     protected function add_tax_to_polylang( $tax_types, $is_settings ) : array { // phpcs:ignore
+        $tax_types[ Exhibition::SLUG ] = Exhibition::SLUG;
 
         return $tax_types;
     }

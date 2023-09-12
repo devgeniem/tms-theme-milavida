@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TMS Theme Milavida\n"
-"POT-Creation-Date: 2023-08-28 19:49+0300\n"
+"POT-Creation-Date: 2023-09-07 16:26+0300\n"
 "PO-Revision-Date: 2022-01-12 16:20+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -51,8 +51,124 @@ msgstr ""
 msgid "-"
 msgstr ""
 
+#: lib/PostType/Exhibition.php:56 lib/PostType/Exhibition.php:97
+msgctxt "theme CPT"
+msgid "Exhibition"
+msgstr ""
+
+#: lib/PostType/Exhibition.php:197
+msgctxt "Breadcrumbs"
+msgid "Home"
+msgstr ""
+
+#: lib/PostType/Exhibition.php:202
+msgctxt "Breadcrumb text"
+msgid "Exhibition"
+msgstr ""
+
 #: lib/ThemeCustomizationController.php:122
 msgid "Send Comment"
+msgstr ""
+
+#: models/archive-exhibition.php:161
+msgid "Search from archive"
+msgstr ""
+
+#: models/archive-exhibition.php:162
+msgid "Search"
+msgstr ""
+
+#: models/archive-exhibition.php:163
+msgid "Type a search word"
+msgstr ""
+
+#: models/archive-exhibition.php:165
+msgid "No results"
+msgstr ""
+
+#: models/archive-exhibition.php:166
+msgid "Year"
+msgstr ""
+
+#: models/archive-exhibition.php:167
+msgid "Selecting the year filter limits the exhibition view."
+msgstr ""
+
+#: models/archive-exhibition.php:168
+msgid "Upcoming"
+msgstr ""
+
+#: models/archive-exhibition.php:261
+msgid "Upcoming exhibitions"
+msgstr ""
+
+#: models/archive-exhibition.php:270
+msgid "Current exhibitions"
+msgstr ""
+
+#: models/archive-exhibition.php:275
+msgid "Past exhibitions"
+msgstr ""
+
+#: models/archive-exhibition.php:347
+msgid "Filter by year"
+msgstr ""
+
+#: models/archive-exhibition.php:579
+#, php-format
+msgctxt "filter with search clause results summary"
+msgid "%1$1s result found for \"%2$2s\""
+msgid_plural "%1$1s results found for \"%2$2s\""
+msgstr[0] ""
+msgstr[1] ""
+
+#: models/archive-exhibition.php:593
+#, php-format
+msgctxt "filter results summary"
+msgid "%1$1s result found"
+msgid_plural "%1$1s results found"
+msgstr[0] ""
+msgstr[1] ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Field/FlexibleContent.php:67
+#: wp-content/mu-plugins/acf-codifier/src/Field/Repeater.php:60
+msgid "Add Row"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/MultisitePostObject.php:24
+msgid "Multisite Post Object"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/MultisiteRelationship.php:24
+msgid "Multisite Relationship"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/MultisiteTaxonomy.php:23
+msgid "Multisite taxonomy"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/Multitaxonomy.php:23
+msgid "Multitaxonomy"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/Multitaxonomy.php:516
+#, php-format
+msgctxt "No terms"
+msgid "No %s"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/PHP.php:18
+msgid "PHP"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/PHP.php:48
+msgid "Instructions"
+msgstr ""
+
+#: wp-content/mu-plugins/acf-codifier/src/Fields/PHP.php:50
+msgid ""
+"This field can only be used with ACF Codifier. Doesn't do anything if "
+"defined in the admin side."
 msgstr ""
 
 #. Theme Name of the plugin/theme
