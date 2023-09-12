@@ -48,28 +48,40 @@ class AlterCallToActionLayout {
                 'label'        => 'Leveä kuva',
                 'instructions' => 'Kuva täyttää 2/3 elementin leveydestä.',
             ],
+            'background_graphic' => [
+                'label'        => 'Taustagrafiikka',
+                'instructions' => 'Lisätäänkö tekstin taustalle grafiikka',
+            ],
         ];
 
         try {
             $round_image_field = ( new Field\TrueFalse( $strings['round_image']['label'] ) )
-                ->set_key( "${key}_round_image" )
+                ->set_key( "{$key}_round_image" )
                 ->set_name( 'round_image' )
                 ->use_ui()
                 ->set_wrapper_width( 50 )
                 ->set_instructions( $strings['round_image']['instructions'] );
 
             $aspect_ratio_field = ( new Field\TrueFalse( $strings['wide_img']['label'] ) )
-                ->set_key( "${key}_wide_img" )
+                ->set_key( "{$key}_wide_img" )
                 ->set_name( 'wide_img' )
                 ->use_ui()
                 ->set_wrapper_width( 33 )
                 ->set_instructions( $strings['wide_img']['instructions'] );
 
+            // Add brackground graphic field
+            $background_graphic = ( new Field\TrueFalse( $strings['background_graphic']['label'] ) )
+                ->set_key( "{$key}_background_graphic" )
+                ->set_name( 'background_graphic' )
+                ->set_default_value( false )
+                ->use_ui()
+                ->set_instructions( $strings['background_graphic']['instructions'] );
+
             $rule_group_automatic = ( new ConditionalLogicGroup() )
             ->add_rule( $round_image_field, '!=', 1 );
             $aspect_ratio_field->add_conditional_logic( $rule_group_automatic );
 
-            $fields['rows']->add_fields( [ $round_image_field, $aspect_ratio_field ] );
+            $fields['rows']->add_fields( [ $round_image_field, $aspect_ratio_field, $background_graphic ] );
 
         }
         catch ( Exception $e ) {

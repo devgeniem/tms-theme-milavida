@@ -175,7 +175,7 @@ class Footer extends Model {
         return apply_filters(
             'tms/theme/footer/typgraphy',
             [
-                'column' => 'has-text-weight-medium is-family-secondary has-text-small',
+                'column' => 'has-text-weight-medium has-text-small',
             ],
         );
     }

@@ -1,11 +1,11 @@
 <div {?anchor}id="{anchor|attr}"{/anchor} class="call-to-action {accent_color|attr}">
     <div class="keep-vertical-spacing">
-      
+
         {#rows}
             <div class="call-to-action__item section is-flex is-justify-content-center pt-6 pb-6 {bg_style|attr}">
              <div class="container columns is-variable is-6 is-vcentered {container_class|attr}">
                 {?image}
-                    <div class="column is-relative {img_column_class|attr}">
+                    <div class="column p-0 is-relative {img_column_class|attr}">
                         {>"shared/layout-after-main-content" /}
                         <div class="image {image_class|attr}">
                             {@image id=image.id size="large" class="objectfit-image" /}
@@ -14,7 +14,7 @@
                     </div>
                 {/image}
 
-                <div class="column {text_column_class|attr}">
+                <div class="column call-to-action__text-container {text_column_class|attr} {?background_graphic}has-background-graphic{/background_graphic}">
                     {?title}
                         <h2 class="call-to-action__title h4 mt-0 {txt_color_class|attr}">
                             {title|html}
@@ -33,6 +33,5 @@
         </div>
         {/rows}
 
-        
     </div>
 </div>

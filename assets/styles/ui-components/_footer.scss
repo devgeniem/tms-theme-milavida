@@ -7,8 +7,29 @@
 $footer-copy-link-border-color: $white;
 
 .site-footer {
+    position: relative;
     background-color: $primary !important;
     color: $primary-invert !important;
+
+    > * {
+        z-index: 1;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/footer_bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;
+        z-index: 0;
+    }
 
     &__copy-links {
         li:not(:last-child)::after {
@@ -17,7 +38,7 @@ $footer-copy-link-border-color: $white;
     }
 
     &__tampere-vaakuna {
-        color: $white !important;
+        color: $primary-invert !important;
     }
 
     a.has-text-paragraph {
@@ -37,6 +58,6 @@ $footer-copy-link-border-color: $white;
     }
 
     h2 {
-        color: $white !important;
+        color: $primary-invert !important;
     }
 }
