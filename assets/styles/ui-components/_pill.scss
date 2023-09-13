@@ -7,6 +7,7 @@
     text-transform: uppercase;
     text-decoration: none !important;
     font-weight: $weight-normal !important;
+    border: 1px solid $primary-invert;
 
     .icon {
         fill: currentColor !important;
@@ -24,7 +25,6 @@
 
     &.is-active {
         &:not(span) {
-           
             &:hover,
             &:focus {
                 background-color: $primary-invert !important;

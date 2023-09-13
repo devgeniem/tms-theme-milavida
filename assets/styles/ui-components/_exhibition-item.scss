@@ -36,6 +36,7 @@
 
     &__badge-text {
         display: inline-block;
+        color: $primary;
         padding: $theme-spacing-half;
         font-weight: $weight-bold;
     }
