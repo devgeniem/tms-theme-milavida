@@ -14,6 +14,28 @@ use TMS\Theme\Base\Interfaces\Controller;
 class RolesController implements Controller {
 
     /**
+     * Exhibition / exhibition-cpt
+     *
+     * @var string[]
+     */
+    private $exhibition_all_capabilities = [
+        'delete_exhibition',
+        'delete_exhibitions',
+        'delete_others_exhibitions',
+        'delete_private_exhibitions',
+        'delete_published_exhibitions',
+        'edit_exhibition',
+        'edit_exhibitions',
+        'edit_others_exhibitions',
+        'edit_private_exhibitions',
+        'edit_published_exhibitions',
+        'publish_exhibitions',
+        'read',
+        'read_exhibition',
+        'read_private_exhibitions',
+    ];
+
+    /**
      * Hooks
      */
     public function hooks() : void {
@@ -30,6 +52,7 @@ class RolesController implements Controller {
      * @param Role $role Instance of \Geniem\Role.
      */
     public function modify_super_administrator_caps( Role $role ) {
+        $role->add_caps( $this->exhibition_all_capabilities );
 
         return $role;
     }
@@ -40,6 +63,7 @@ class RolesController implements Controller {
      * @param Role $role Instance of \Geniem\Role.
      */
     public function modify_admin_caps( Role $role ) {
+        $role->add_caps( $this->exhibition_all_capabilities );
 
         return $role;
     }
@@ -50,6 +74,7 @@ class RolesController implements Controller {
      * @param Role $role Instance of \Geniem\Role.
      */
     public function modify_editor_caps( Role $role ) {
+        $role->add_caps( $this->exhibition_all_capabilities );
 
         return $role;
     }
@@ -60,6 +85,7 @@ class RolesController implements Controller {
      * @param Role $role Instance of \Geniem\Role.
      */
     public function modify_author_caps( Role $role ) {
+        $role->add_caps( $this->exhibition_all_capabilities );
 
         return $role;
     }
@@ -70,6 +96,7 @@ class RolesController implements Controller {
      * @param Role $role Instance of \Geniem\Role.
      */
     public function modify_contributor_caps( Role $role ) {
+        $role->add_caps( $this->exhibition_all_capabilities );
 
         return $role;
     }

@@ -14,6 +14,7 @@ $button-secondary-border-color: $button-primary-border-color;
     // box-shadow: 1px 1px 8px 0 bulmaLighten($primary-invert, 50);
     color: $primary;
     background-color: $primary-invert;
+    font-family: $family-primary;
 
     &:hover,
     &.is-hovered,

@@ -2,6 +2,7 @@
 
 namespace TMS\Theme\Milavida;
 
+use ArchiveExhibition;
 use TMS\Theme\Base\Interfaces;
 
 /**
@@ -16,6 +17,7 @@ class ThemeController extends \TMS\Theme\Base\ThemeController {
         $classes = [
             Assets::class,
             ACFController::class,
+            BlocksController::class,
             PostTypeController::class,
             TaxonomyController::class,
             Localization::class,
@@ -33,5 +35,8 @@ class ThemeController extends \TMS\Theme\Base\ThemeController {
             }
         } );
 
+        add_action( 'init', function () {
+            ArchiveExhibition::hooks();
+        } );
     }
 }

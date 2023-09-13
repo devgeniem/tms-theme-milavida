@@ -1,16 +1,16 @@
 <div {?anchor}id="{anchor|attr}"{/anchor} class="section content-columns">
     <div class="container keep-vertical-spacing">
         {#rows}
-            <div class="content-columns__item mt-6 mb-6 columns is-vcentered {item_class|s}">
+            <div class="content-columns__item mt-6 mb-6 columns {item_class|s}">
                 {?image}
-                    <div class="column {img_col_class|attr}">
+                    <div class="column p-0 {img_col_class|attr}">
                         <div class="image">
                             {@image id=image.id size="large" class="objectfit-image" /}
                         </div>
                     </div>
                 {/image}
 
-                <div class="column {text_col_class|attr}">
+                <div class="column content-columns__text-container pr-5 pl-5 {text_col_class|attr} {?background_graphic}has-background-graphic{/background_graphic}">
                     {?title}
                         <h2 class="content-columns__title h4 mt-0-desktop">
                             {title|html}

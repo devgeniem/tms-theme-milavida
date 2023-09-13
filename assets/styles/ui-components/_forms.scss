@@ -1,5 +1,4 @@
 form {
-    
     select,
     input,
     textarea {
@@ -8,8 +7,8 @@ form {
 }
 
 select {
-    background-color: $primary-invert !important;
-    color: $primary !important;
+    background-color: $primary !important;
+    color: $primary-invert !important;
 
     @include until($desktop) {
         font-size: 1em;
