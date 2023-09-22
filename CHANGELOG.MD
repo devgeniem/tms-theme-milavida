@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+- TMS-949:
+    - Fix related article images on single article page
+    - Fix colors on mobile nav
+
 ## [1.0.0] - 2023-09-13
 
 - TMS-949:
