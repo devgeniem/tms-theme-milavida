@@ -183,6 +183,7 @@ class ArchiveExhibition extends BaseModel {
 
         $posts_per_page   = self::UPCOMING_ITEMS_PER_PAGE;
         $start_date_order = 'ASC';
+        $end_date_order   = 'DESC';
         $instance         = new ArchiveExhibition();
 
         if ( $instance->is_past_archive() ) {
@@ -219,10 +220,14 @@ class ArchiveExhibition extends BaseModel {
             }
 
             $wp_query->set( 'meta_query', $meta_query );
+            $wp_query->set( 'meta_key', 'end_date' );
+            $wp_query->set( 'orderby', [ 'end_date' => $end_date_order, 'title' => 'ASC' ] );
+        }
+        else {
+            $wp_query->set( 'meta_key', 'start_date' );
+            $wp_query->set( 'orderby', [ 'start_date' => $start_date_order, 'title' => 'ASC' ] );
         }
 
-        $wp_query->set( 'orderby', [ 'start_date' => $start_date_order, 'title' => 'ASC' ] );
-        $wp_query->set( 'meta_key', 'start_date' );
         $wp_query->set( 'posts_per_page', $posts_per_page );
     }
 
