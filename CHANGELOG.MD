@@ -7,9 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.3] - 2023-10-12
+
+### Fixed
+
 - TMS-982: Fix exhibition-archive year-filters & search
-- TMS-981: Change past exhibition order to sort by end_date
 - TMS-936: Image carousel accessibility fixes
+
+### Changed
+
+- TMS-981: Change past exhibition order to sort by end_date
 
 ## [1.1.2] - 2023-10-09
 
