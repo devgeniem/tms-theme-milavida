@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - TMS-936: Image carousel accessibility fixes
 
+## [1.1.2] - 2023-10-09
+
+- TMS-978: Remove manual-event styles
+
 ## [1.1.1] - 2023-10-04
 
 - TMS-978: Reduce single manual-event description line-height & margin
