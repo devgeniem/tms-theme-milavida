@@ -72,7 +72,10 @@ $pill-border-color-hover: $primary;
 $pill-outlined-color: $black;
 
 $pagination-item-color: $color-milavida-black;
-$pagination-item-color-current: $color-white;
+$pagination-item-color-current: $color-milavida-black;
+$pagination-item-background-color-current: $color-milavida-grey;
+$pagination-item-background-color-current-hover: $color-white;
+$pagination-item-background-color-current-focus: $color-white;
 $pagination-item-background-color: $color-white;
 $pagination-item-background-color-hover: $pagination-item-background-color;
 $pagination-item-background-color-focus: $pagination-item-background-color;

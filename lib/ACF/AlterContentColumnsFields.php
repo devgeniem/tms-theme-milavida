@@ -64,6 +64,7 @@ class AlterContentColumnsFields {
                 ->set_wrapper_width( 55 )
                 ->set_tabs( 'visual' )
                 ->set_toolbar( [ 'bold', 'link' ] )
+                ->redipress_include_search()
                 ->disable_media_upload();
 
             // Add link field
