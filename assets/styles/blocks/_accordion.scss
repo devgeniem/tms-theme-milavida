@@ -33,4 +33,10 @@
             max-height: $image-max-height;
         }
     }
+
+    &__close-all,
+    &__open-all,
+    &__icon-text {
+        color: $black !important;
+    }
 }
