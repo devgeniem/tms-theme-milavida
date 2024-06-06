@@ -8,9 +8,9 @@
         &:focus {
             outline: 0.125rem dotted $white !important;
             outline-offset: 0.25rem !important;
-            color: $primary-invert !important; // sass-lint:disable-line no-important
+            color: $primary !important; // sass-lint:disable-line no-important
             .icon {
-                fill: $primary-invert !important; // sass-lint:disable-line no-important
+                fill: $primary !important; // sass-lint:disable-line no-important
             }
         }
         &:hover{
@@ -35,7 +35,8 @@
         .icon {
             fill: $white !important; // sass-lint:disable-line no-important
         }
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $white;
             .icon {
                 fill: $black !important; // sass-lint:disable-line no-important

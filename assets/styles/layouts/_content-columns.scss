@@ -1,4 +1,67 @@
 .content-columns {
+    &__text-container {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+
+        > * {
+            z-index: 1;
+        }
+
+        &.has-background-graphic {
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("../images/milavida_graphic.svg");
+                background-repeat: no-repeat;
+                background-size: 200%;
+                background-position: 100% 40%;
+                opacity: 0.05;
+                z-index: 0;
+            }
+
+            &.is-6.is-3-desktop {
+                &::after {
+                    background-size: 300%;
+                    background-position: 90% 40%;
+                }
+            }
+            &.is-6.is-7-desktop {
+                &::after {
+                    background-size: 140%;
+                    background-position: 178% 40%;
+                }
+            }
+        }
+    }
+
+    &__item.is-reversed-tablet {
+        .content-columns__text-container.has-background-graphic {
+            &::after {
+                background-position: 0% 40%;
+            }
+
+            &.is-6.is-3-desktop {
+                &::after {
+                    background-size: 300%;
+                    background-position: 10% 40%;
+                }
+            }
+            &.is-6.is-7-desktop {
+                &::after {
+                    background-size: 140%;
+                    background-position: -78% 40%;
+                }
+            }
+        }
+    }
+
     &__description {
         a {
             text-decoration: underline;

@@ -42,9 +42,11 @@ class Footer extends Model {
         $contact_info        = $this->contact_info();
         $second_contact_info = $this->second_contact_info();
         $columns             = $this->link_columns();
+        $some_column         = $this->some_link_columns();
         $count               = empty( $columns ) ? 0 : count( $columns );
         $count               = empty( $contact_info ) ? $count : ++ $count;
         $count               = empty( $second_contact_info ) ? $count : ++ $count;
+        $count               = empty( $some_column ) ? $count : ++ $count;
 
         return $count <= 3
             ? 'is-6 is-4-widescreen'
@@ -114,6 +116,26 @@ class Footer extends Model {
     }
 
     /**
+     * Get social media link column
+     *
+     * @return mixed|null
+     */
+    public function some_link_columns() {
+        $columns = Settings::get_setting( 'some_link_columns' ) ?? null;
+
+        if ( empty( $columns['some_link_column'] ) ) {
+            return null;
+        }
+
+        // Filter out empty links
+        $columns['some_link_column'] = array_filter( $columns['some_link_column'], function ( $item ) {
+            return ! empty( $item['some_link']['title'] );
+        } );
+
+        return $columns;
+    }
+
+    /**
      * Get privacy links
      *
      * @return mixed|null
@@ -175,7 +197,7 @@ class Footer extends Model {
         return apply_filters(
             'tms/theme/footer/typgraphy',
             [
-                'column' => 'has-text-weight-medium is-family-secondary has-text-small',
+                'column' => 'has-text-weight-medium has-text-small',
             ],
         );
     }

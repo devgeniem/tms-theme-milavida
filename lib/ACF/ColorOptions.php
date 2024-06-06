@@ -109,12 +109,10 @@ class ColorOptions {
                 ->set_key( "${key}_color_options_bg_color" )
                 ->set_name( 'bg_color' )
                 ->set_choices( [
-                    'white'          => 'Valkoinen',
-                    'primary-invert' => 'Kahvinruskea',
-                    'primary'        => 'Kermankeltainen',
-                    'yellow'         => 'Keltainen',
+                    'primary'        => 'Valkoinen',
+                    'primary-invert' => 'Musta',
                 ] )
-                ->set_default_value( 'white' )
+                ->set_default_value( 'primary' )
                 ->set_wrapper_width( 50 )
                 ->set_instructions( $strings['background_color']['instructions'] );
 
@@ -122,10 +120,10 @@ class ColorOptions {
                 ->set_key( "${key}_color_options_text_color" )
                 ->set_name( 'text_color' )
                 ->set_choices( [
-                    'coffee' => 'Kahvinruskea',
-                    'creme'  => 'Kermankeltainen',
+                    'primary-invert' => 'Musta',
+                    'primary'        => 'Valkoinen',
                 ] )
-                ->set_default_value( 'coffee' )
+                ->set_default_value( 'primary-invert' )
                 ->set_wrapper_width( 50 )
                 ->set_instructions( $strings['text_color']['instructions'] );
 

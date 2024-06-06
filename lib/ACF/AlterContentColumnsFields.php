@@ -42,6 +42,10 @@ class AlterContentColumnsFields {
                 'label'        => 'Linkkipainike',
                 'instructions' => '',
             ],
+            'background_graphic' => [
+                'label'        => 'Taustagrafiikka',
+                'instructions' => 'Lisätäänkö tekstin taustalle grafiikka',
+            ],
         ];
 
         try {
@@ -60,6 +64,7 @@ class AlterContentColumnsFields {
                 ->set_wrapper_width( 55 )
                 ->set_tabs( 'visual' )
                 ->set_toolbar( [ 'bold', 'link' ] )
+                ->redipress_include_search()
                 ->disable_media_upload();
 
             // Add link field
@@ -69,8 +74,17 @@ class AlterContentColumnsFields {
                 ->set_wrapper_width( 67 )
                 ->set_instructions( $strings['link']['instructions'] );
 
+            // Add brackground graphic field
+            $background_graphic = ( new Field\TrueFalse( $strings['background_graphic']['label'] ) )
+                ->set_key( "{$key}_background_graphic" )
+                ->set_name( 'background_graphic' )
+                ->set_default_value( false )
+                ->use_ui()
+                ->set_instructions( $strings['background_graphic']['instructions'] );
+
             $fields['rows']->add_field_after( $wysiwyg_field, 'image' );
             $fields['rows']->add_field( $link_field );
+            $fields['rows']->add_field( $background_graphic );
 
         }
         catch ( Exception $e ) {

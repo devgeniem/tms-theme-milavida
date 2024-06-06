@@ -43,6 +43,8 @@
 
 .lang-nav {
     &--horizontal {
+        font-family: $family-primary !important;
+
         a {
             border-color: $primary-invert !important;
             color: $primary !important;

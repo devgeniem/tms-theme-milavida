@@ -2,6 +2,7 @@
 
 namespace TMS\Theme\Milavida;
 
+use ArchiveExhibition;
 use Closure;
 use TMS\Theme\Base\Interfaces\Controller;
 
@@ -39,6 +40,10 @@ class ThemeSupports implements Controller {
      * @return array
      */
     protected function query_vars( $vars ) {
+        $vars[] = ArchiveExhibition::SEARCH_QUERY_VAR;
+        $vars[] = ArchiveExhibition::YEAR_QUERY_VAR;
+        $vars[] = ArchiveExhibition::PAST_QUERY_VAR;
+        $vars[] = ArchiveExhibition::UPCOMING_QUERY_VAR;
 
         return $vars;
     }

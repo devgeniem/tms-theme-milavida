@@ -72,7 +72,10 @@ $pill-border-color-hover: $primary;
 $pill-outlined-color: $black;
 
 $pagination-item-color: $color-milavida-black;
-$pagination-item-color-current: $color-white;
+$pagination-item-color-current: $color-milavida-black;
+$pagination-item-background-color-current: $color-milavida-grey;
+$pagination-item-background-color-current-hover: $color-white;
+$pagination-item-background-color-current-focus: $color-white;
 $pagination-item-background-color: $color-white;
 $pagination-item-background-color-hover: $pagination-item-background-color;
 $pagination-item-background-color-focus: $pagination-item-background-color;
@@ -93,9 +96,9 @@ $navbar-item-navbar-active-bg-color: $black;
 
 $fly-out-nav-trigger-icon: $color-milavida-grey-dark;
 $fly-out-nav-trigger-icon-hover: $color-milavida-grey;
-$fly-out-nav-primary-link: $color-white;
-$fly-out-nav-primary-link-hover: $color-white;
-$fly-out-nav-primary-dropdown-active-background: $primary;
+$fly-out-nav-primary-link: $color-milavida-black;
+$fly-out-nav-primary-link-hover: $color-milavida-black;
+$fly-out-nav-primary-dropdown-active-background: $color-milavida-black;
 $fly-out-nav-secondary-border-color: $color-ui-border;
 $fly-out-nav-secondary-link: $fly-out-nav-primary-link;
 $fly-out-nav-secondary-link-hover: $fly-out-nav-primary-link-hover;
