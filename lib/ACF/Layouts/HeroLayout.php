@@ -48,6 +48,18 @@ class HeroLayout extends Layout {
                 'label'        => 'Kuva',
                 'instructions' => '',
             ],
+            'video'          => [
+                'label'        => 'Videotiedosto',
+                'instructions' => '',
+            ],
+            'video_caption'  => [
+                'label'        => 'Videon tekstivastine',
+                'instructions' => 'Tarkoitettu ruudunlukijoille, ei näytetä sivustolla.',
+            ],
+            'autoplay_video' => [
+                'label'        => 'Käynnistä video heti sivunlatauksessa',
+                'instructions' => '',
+            ],
             'title'         => [
                 'label'        => 'Otsikko',
                 'instructions' => '',
@@ -123,6 +135,26 @@ class HeroLayout extends Layout {
             ->set_required()
             ->set_instructions( $strings['image']['instructions'] );
 
+        $video_field = ( new Field\File( $strings['video']['label'] ) )
+            ->set_key( "{$key}_video_file" )
+            ->set_name( 'video_file' )
+            ->set_mime_types( [ 'mp4' ] )
+            ->set_wrapper_width( 33 )
+            ->set_instructions( $strings['video']['instructions'] );
+
+        $video_caption_field = ( new Field\Textarea( $strings['video_caption']['label'] ) )
+            ->set_key( "{$key}_video_caption" )
+            ->set_name( 'video_caption' )
+            ->set_wrapper_width( 33 )
+            ->set_instructions( $strings['video_caption']['instructions'] );
+
+        $autoplay_video_field = ( new Field\TrueFalse( $strings['autoplay_video']['label'] ) )
+            ->set_key( "{$key}_autoplay_video" )
+            ->set_name( 'autoplay_video' )
+            ->use_ui()
+            ->set_wrapper_width( 33 )
+            ->set_instructions( $strings['autoplay_video']['instructions'] );
+
         $title_field = ( new Field\Text( $strings['title']['label'] ) )
             ->set_key( "{$key}_title" )
             ->set_name( 'title' )
@@ -183,6 +215,9 @@ class HeroLayout extends Layout {
                     'tms/acf/layout/hero--milavida/fields',
                     [
                         $image_field,
+                        $video_field,
+                        $video_caption_field,
+                        $autoplay_video_field,
                         $title_field,
                         $description_field,
                         $link_field,
