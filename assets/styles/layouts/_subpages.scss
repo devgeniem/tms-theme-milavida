@@ -30,5 +30,13 @@
         &.has-background-image {
             color: $primary !important;
         }
+
+        &.has-background-primary {
+            &:hover,
+            &:focus {
+                color: $primary !important;
+                background-color: $primary-invert !important;
+            }
+        }
     }
 }

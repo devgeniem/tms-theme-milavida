@@ -54,10 +54,6 @@
                 color: $primary !important;
             }
 
-            &:hover {
-                background-color: $link-hover !important;
-            }
-
             &:focus {
                 outline-offset: .2rem;
                 outline: .15rem dotted $primary-invert !important;

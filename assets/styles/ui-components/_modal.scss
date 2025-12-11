@@ -8,17 +8,17 @@
         &:focus {
             outline: 0.15rem dotted $white !important;
             outline-offset: 0.25rem !important;
-            color: $primary !important; // sass-lint:disable-line no-important
+            color: $black !important; // sass-lint:disable-line no-important
             .icon {
-                fill: $primary !important; // sass-lint:disable-line no-important
+                fill: $black !important; // sass-lint:disable-line no-important
             }
         }
         &:hover{
-            background-color: $black !important;
-            color: $white !important;
+            background-color: $white !important;
+            color: $black !important;
             outline: 0;
             .icon {
-                fill: $white !important;
+                fill: $black !important;
             }
         }
     }
@@ -37,9 +37,9 @@
         }
         &:hover,
         &:focus {
-            background-color: $white;
+            background-color: $black;
             .icon {
-                fill: $black !important; // sass-lint:disable-line no-important
+                fill: $white !important; // sass-lint:disable-line no-important
             }
         }
         &:focus {
@@ -94,7 +94,7 @@
         .slick-current {
             &:focus {
                 .image-carousel__item {
-                    outline: 0.15rem dotted #fff;
+                    outline: 0.15rem dotted $white;
                     outline-offset: 0.25rem;
                 }
             }
