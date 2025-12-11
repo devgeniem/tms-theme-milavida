@@ -33,8 +33,8 @@ select {
 
         &:hover,
         &:focus {
-            color: $primary !important;
-            background-color: $primary-invert !important;
+            color: $primary-invert !important;
+            background-color: $primary !important;
         }
     }
 
@@ -55,20 +55,20 @@ select {
         &:hover,
         &:focus {
             &:after {
-                background-color: $primary;
+                background-color: $primary-invert;
             }
         }
 
         &:active {
             &:after {
-                background-color: $primary;
+                background-color: $primary-invert;
             }
         }
     }
 
     button[type="submit"] {
 
-        &:after { 
+        &:after {
             mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><path d="M2.13436 0L0.365646 1.76877L6.09688 7.5L0.365646 13.2312L2.13436 15L9.63436 7.5L2.13436 0Z"/></svg>');
             mask-size: cover;
             mask-repeat: no-repeat;
@@ -93,7 +93,7 @@ select {
 
 .gfield_checkbox {
 
-    label {      
+    label {
         &::before {
             margin-top: 0.25rem;
         }
@@ -119,9 +119,6 @@ select {
 
     &:hover,
     &:focus {
-        border-color: $primary-invert !important;
-        background-color: $primary !important;
-        color: $primary-invert !important;
         outline: 0.15rem dotted $black !important;
         outline-offset: 0.25rem !important;
     }

@@ -63,13 +63,6 @@
         outline: none !important;
     }
 
-    &:hover,
-    &:focus {
-        .icon {
-            fill: $black !important;
-        }
-    }
-
     &:focus {
         outline: .15rem dotted $white !important;
     }
