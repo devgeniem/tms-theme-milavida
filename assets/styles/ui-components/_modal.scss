@@ -32,21 +32,21 @@
     }
 
     .slick-arrow {
-        .icon {
-            fill: $white !important; // sass-lint:disable-line no-important
-        }
+        &,
         &:hover,
-        &:focus {
-            background-color: $black;
+        &:focus,
+        &:active {
+            background-color: $white !important;
+
             .icon {
-                fill: $white !important; // sass-lint:disable-line no-important
+                fill: $black !important; // sass-lint:disable-line no-important
             }
         }
+
         &:focus {
             outline: 0.15rem dotted $white !important;
             outline-offset: 0.25rem !important;
         }
-
     }
 }
 
