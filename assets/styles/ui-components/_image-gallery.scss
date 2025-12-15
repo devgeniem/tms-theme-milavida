@@ -1,19 +1,19 @@
 .gallery-controls {
     .gallery-button {
-        background-color: transparent !important;
-        border: 1px solid $white !important;
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $white !important;
 
-        &:hover {
-            outline: none !important;
+            .icon {
+                fill: $black !important; // sass-lint:disable-line no-important
+            }
         }
 
         &:focus {
             outline-offset: 0.25rem !important;
             outline: .15rem dotted $white !important;
-        }
-
-        .icon {
-            fill: $white !important;
         }
     }
 }

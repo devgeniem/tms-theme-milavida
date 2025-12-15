@@ -18,24 +18,22 @@
         }
 
         &.has-text-primary-invert {
-            color: $primary-invert !important;
-
+            &,
             &:hover,
-            &:focus {
-                color: $primary !important;
+            &:focus,
+            &:active {
+                color: $primary-invert !important;
+                background-color: $primary !important;
             }
         }
 
         &.has-background-primary-invert,
         &.has-background-image {
-            color: $primary !important;
-        }
-
-        &.has-background-primary {
+            &,
             &:hover,
-            &:focus {
+            &:focus,
+            &:active {
                 color: $primary !important;
-                background-color: $primary-invert !important;
             }
         }
     }
