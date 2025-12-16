@@ -160,7 +160,7 @@ h4,
 $link-outline-color: $color-milavida-black;
 
 main {
-    a:not(.pill):not(.button) {
+    a:not(.pill):not(.button):not(.post-link) {
         text-underline-offset: .125rem;
 
         &:focus {
