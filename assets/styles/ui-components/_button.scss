@@ -60,7 +60,8 @@ $button-secondary-border-color: $button-primary-border-color;
         &.is-hovered,
         &:focus,
         &.is-focused,
-        &:active {
+        &:active,
+        &.is-active {
             border-color: $primary !important;
             background-color: $primary-invert !important;
             color: $primary !important;
