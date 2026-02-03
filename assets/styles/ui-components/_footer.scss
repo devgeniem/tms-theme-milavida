@@ -50,13 +50,6 @@ $footer-copy-link-border-color: $white;
         }
     }
 
-    img,
-    .button {
-        &:focus {
-            outline-color: $white !important;
-        }
-    }
-
     h2 {
         color: $primary-invert !important;
     }

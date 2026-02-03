@@ -1,24 +1,35 @@
 .modal {
     .modal-close-button {
-        background-color: $white !important;
-        color: $black !important;
-        .icon {
-            fill: $black !important;
-        }
-        &:focus {
-            outline: 0.15rem dotted $white !important;
-            outline-offset: 0.25rem !important;
-            color: $primary !important; // sass-lint:disable-line no-important
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $white !important;
+            color: $black !important;
+
             .icon {
-                fill: $primary !important; // sass-lint:disable-line no-important
+                fill: $black !important;
             }
         }
-        &:hover{
-            background-color: $black !important;
-            color: $white !important;
+
+        &:focus,
+        &:active {
+            outline: 0.15rem dotted $white !important;
+            outline-offset: 0.25rem !important;
+            background-color: $white !important;
+            color: $black !important; // sass-lint:disable-line no-important
+
+            .icon {
+                fill: $black !important; // sass-lint:disable-line no-important
+            }
+        }
+
+        &:hover {
+            background-color: $white !important;
+            color: $black !important;
             outline: 0;
             .icon {
-                fill: $white !important;
+                fill: $black !important;
             }
         }
     }
@@ -32,21 +43,21 @@
     }
 
     .slick-arrow {
-        .icon {
-            fill: $white !important; // sass-lint:disable-line no-important
-        }
+        &,
         &:hover,
-        &:focus {
-            background-color: $white;
+        &:focus,
+        &:active {
+            background-color: $white !important;
+
             .icon {
                 fill: $black !important; // sass-lint:disable-line no-important
             }
         }
+
         &:focus {
             outline: 0.15rem dotted $white !important;
             outline-offset: 0.25rem !important;
         }
-
     }
 }
 
@@ -94,7 +105,7 @@
         .slick-current {
             &:focus {
                 .image-carousel__item {
-                    outline: 0.15rem dotted #fff;
+                    outline: 0.15rem dotted $white;
                     outline-offset: 0.25rem;
                 }
             }
